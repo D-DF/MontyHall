@@ -15,7 +15,7 @@ while (count !== 2) {
 
     console.log(indexHasard)
 
-    question = readlineSync.question(`Quel porte?`)
+    question = readlineSync.question(`Quel porte? 🚪 🚪 🚪`)
         while(isNaN(question)) {
             console.log("Un nombre s'il vous plait!")
             question = readlineSync.question(`Quel porte?`)
@@ -29,7 +29,7 @@ while (count !== 2) {
         tableau.splice(!indexHasard && !question, 1)
         }
 
-    questionDeux = readlineSync.question("Tu gardes ton choix ou change de portes?")
+    questionDeux = readlineSync.question("Tu gardes ton choix ou change de portes? 🚪 🚪")
         while(isNaN(questionDeux)) {
         console.log("Un nombre s'il vous plait!")
         questionDeux = readlineSync.question("Tu gardes ton choix ou change de portes?")
