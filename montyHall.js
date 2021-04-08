@@ -16,6 +16,11 @@ while (count !== 2) {
     console.log(indexHasard)
 
     question = readlineSync.question(`Quel porte?`)
+        while(isNaN(question)) {
+            console.log("Un nombre s'il vous plait!")
+            question = readlineSync.question(`Quel porte?`)
+        }
+    
         if(question !== indexHasard) {
             count ++
         tableau.splice(question, 1)
@@ -25,12 +30,17 @@ while (count !== 2) {
         }
 
     questionDeux = readlineSync.question("Tu gardes ton choix ou change de portes?")
+        while(isNaN(questionDeux)) {
+        console.log("Un nombre s'il vous plait!")
+        questionDeux = readlineSync.question("Tu gardes ton choix ou change de portes?")
+        }
+
         if(questionDeux == indexHasard) {
         console.log("Bravo")
         count++
         process.exit(1)
         } else {
-        console.log("perdu")
+        console.log(`Perdu, la bonne porte était la ${indexHasard}`)
         count++
         process.exit(1)
         }
